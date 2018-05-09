@@ -193,7 +193,7 @@ class ArtiComp():
             track.append(msg)
 
         print('Saving midi file')
-        pred_mid_song.save('beth_gen1.midi')
+        pred_mid_song.save('out/beth_gen1.midi')
         toc = time.time()
         print('Time taken for rendering midi file {}'.format(toc-tic))
         print('Done')
