@@ -17,7 +17,7 @@ class ArtiComp():
         converts the midi file into notes based only on 'notes_on'
         '''
         # load the midi file
-        midi_song = MidiFile('data/mz_311_1.mid')
+        midi_song = MidiFile('data/beethoven_opus10_1.mid')
         notes = []
 
         # for msg in midi_song:
@@ -126,7 +126,7 @@ class ArtiComp():
 
         # Fitting Model
         print('Fitting Model...\n')
-        model.fit(X, Y, batch_size=250, epochs=250, verbose=1)
+        model.fit(X, Y, batch_size=250, epochs=200, verbose=1)
 
         return model
 
@@ -193,7 +193,7 @@ class ArtiComp():
             track.append(msg)
 
         print('Saving midi file')
-        pred_mid_song.save('moz_gen1.midi')
+        pred_mid_song.save('beth_gen1.midi')
         toc = time.time()
         print('Time taken for rendering midi file {}'.format(toc-tic))
         print('Done')
